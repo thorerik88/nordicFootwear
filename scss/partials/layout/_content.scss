@@ -1,0 +1,15 @@
+.content {
+    text-align: center;
+
+    &__box {
+        margin: 0 0 3rem;
+        
+        &__header {
+            margin: 1.5rem 0 2rem;
+        }
+    }
+
+    &__limited img {
+        margin-bottom: -5px;
+    }
+}

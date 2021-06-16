@@ -1,0 +1,26 @@
+
+.nav {
+    @include flexCenter; 
+    box-shadow: 0 3px 10px rgba(0,0,0, .16);
+   
+       &__logo {
+           order: 2;
+           background-image: url("./../assets/mobile/logo_150x45.svg");
+           width: 125px;
+           height: 37.5px;
+           margin: 1.5rem 3rem;
+       }
+   
+       &__navmenu {
+           order: 1;
+       }
+   
+       &__profile {
+           order: 3;
+       }
+   
+       i {
+           color: $primary-color;
+           font-size: $awesome-size;
+       }
+   }

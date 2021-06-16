@@ -1,0 +1,15 @@
+@import './partials/resets';
+@import './partials/variables';
+
+@import './partials/layout/nav';
+@import './partials/layout/hero';
+@import './partials/layout/ads';
+@import './partials/layout/category';
+@import './partials/layout/typography';
+@import './partials/layout/button';
+@import './partials/layout/content';
+
+body {
+    color: $primary-color;
+}
+
