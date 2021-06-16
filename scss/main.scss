@@ -8,8 +8,15 @@
 @import './partials/layout/typography';
 @import './partials/layout/button';
 @import './partials/layout/content';
+@import './partials/layout/featured';
+@import './partials/layout/footer';
+
+html, body {
+    color: $primary-color;
+    overflow-x: hidden;
+}
 
 body {
-    color: $primary-color;
+    position: relative;
 }
 
