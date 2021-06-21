@@ -8,9 +8,9 @@ $light-green: #78BF8D;
 /*FONTS*/
 $text-large: "Raleway", sans-serif;
 $text-small: "Montserrat", sans-serif;
-$font-large: 38px;
+$font-large: 34px;
 $font-medium: 25px;
-$font-small: 20px;
+$font-small: 21px;
 
 $font-weights: (
     "regular": 400,
@@ -24,13 +24,10 @@ $awesome-size: 25px;
 /*MIXIN*/
 @mixin flexCenter {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 @function weight($weight-name) {
     @return map-get($font-weights, $weight-name)
 }
-
-
-

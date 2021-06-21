@@ -2,10 +2,10 @@
     text-align: center;
 
     &__box {
-        margin: 0 0 3rem;
+        margin: 3rem 0 3rem;
         
         &__img {
-            max-width: 100%;
+            min-width: 100%;
             height: auto;
         }
 
@@ -16,5 +16,26 @@
 
     &__limited img {
         margin-bottom: -5px;
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    .content {
+        margin: 0 auto;
+        width: 90%;
+
+        &__box {
+            display: flex;
+
+            &__wrapper {
+                width: 100%;
+                max-width: 50%;
+            }
+
+            &__img {
+                max-width: 100%;
+                min-height: 100%;
+            }
+        }
     }
 }

@@ -2,13 +2,15 @@
 .nav {
     @include flexCenter; 
     box-shadow: 0 3px 10px rgba(0,0,0, .16);
-   
+    padding: 0 3rem;
+
        &__logo {
            order: 2;
            background-image: url("./../assets/mobile/logo_150x45.svg");
-           width: 125px;
-           height: 37.5px;
-           margin: 1.5rem 3rem;
+           background-size: cover;
+           width: 150px;
+           height: 45px;
+           margin: 1.5rem 1rem;
        }
    
        &__navmenu {
