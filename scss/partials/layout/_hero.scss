@@ -1,6 +1,7 @@
 .hero {
     background-image: url('../../../assets/mobile/bergen_750x422.jpeg');
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
     max-width: 100%;
     min-height: 281px;
@@ -18,4 +19,22 @@
             display: inline-block;
             margin-top: 2.5rem;
         }
+}
+
+@media only screen and (min-width: 641px) {
+    .hero {
+        min-height: 350px; 
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .hero {
+        background-image: url('../../../assets/desktop/bergen_1000x563.jpeg');
+        min-height: 500px;
+        padding: 8rem 0 0 0;
+
+        &__btn {
+            font-size: $font-small-desktop;
+        }
+    }
 }

@@ -2,7 +2,7 @@
 .nav {
     @include flexCenter; 
     box-shadow: 0 3px 10px rgba(0,0,0, .16);
-    padding: 0 3rem;
+    padding: 0 2rem;
 
        &__logo {
            order: 2;
@@ -14,11 +14,23 @@
        }
    
        &__navmenu {
-           order: 1;
+            order: 1;
+            width: 15%;
+
+            &__desktop {
+                display: none;
+            }
        }
    
-       &__profile {
-           order: 3;
+       &__icons {
+            display: flex;
+            order: 3;
+            width: 15%;
+
+            i:first-of-type {
+                margin-left: auto;
+                margin-right: 1rem;
+            }
        }
    
        i {
@@ -26,3 +38,39 @@
            font-size: $awesome-size;
        }
    }
+
+@media only screen and (min-width: 641px) {
+    .nav {
+        padding: 0 4rem;
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .nav {
+
+        &__logo {
+            order: 1;
+        }
+
+        &__navmenu {
+            width: 60%;
+
+            &__desktop {
+                display: inline-block;
+
+                &__list {
+                    display: flex;
+
+                    li {
+                        list-style: none;
+                        margin: 0 2rem;
+                    }
+                }
+            }
+
+            i {
+                display: none;
+            }
+        }
+    }
+}

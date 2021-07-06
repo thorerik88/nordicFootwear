@@ -6,13 +6,64 @@ h1 {
     font-size: $font-large;
 }
 
+h2 {
+    font-size: $font-medium;
+}
+
+h3 {
+    font-size: $font-small + 3px;
+}
+
 a, p {
     font-family: $text-small;
 }
 
-a {
-    text-decoration: none;
+a, p, li {
+    font-size: $font-small; 
 }
 
+a {
+    text-decoration: none;
+    color: $primary-color;
+}
 
+li {
+    font-family: $text-small;
+}
+
+@media only screen and (min-width: 641px) {
+    h1 {
+        font-size: $font-large-tab;
+    }
+    
+    h2 {
+        font-size: $font-medium-tab;
+    }
+
+    h3 {
+        font-size: $font-small-tab + 3px;
+    }
+    
+    a, p, li {
+        font-size: $font-small-tab; 
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    h1 {
+        font-size: $font-large-desktop;
+    }
+    
+    h2 {
+        font-size: $font-medium-desktop;
+    }
+
+    h3 {
+        font-size: $font-small-desktop + 3px;
+    }
+    
+    a, p, li {
+        font-size: $font-small-desktop; 
+    }
+}
 

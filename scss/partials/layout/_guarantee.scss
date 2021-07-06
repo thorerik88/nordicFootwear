@@ -1,0 +1,52 @@
+.guarantee {
+    display: flex;
+    margin: 3rem auto;
+    width: 90%;
+
+    &__item {
+        display: inline-block;
+        width: 33.33%;
+        text-align: center;
+
+        i {
+            color: $primary-color;
+            font-size: $awesome-size + 5px;
+            margin-bottom: .7rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    .guarantee {
+        margin: 4rem auto;
+        width: 80%;
+
+        &__item {
+
+            i {
+                font-size: $awesome-size + 15px;
+            }
+
+            p {
+                font-size: $font-small-tab;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .guarantee {
+        margin: 7rem auto;
+
+        &__item {
+
+            i {
+                font-size: $awesome-size + 25px;
+            }
+
+            p {
+                font-size: $font-small-desktop;
+            }
+        }
+    }
+}

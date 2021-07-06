@@ -2,15 +2,47 @@
     text-align: center;
 
     &__box {
-        margin: 3rem 0 3rem;
+        margin: 0 0 3rem;
         
-        &__img {
-            min-width: 100%;
-            height: auto;
+        &__img-wrapper {
+            position: relative;
+
+            &__img {
+                min-width: 100%;
+                height: auto;
+            }
+            
+            &__discount-tag {
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: .2rem;
+                border: 1px solid #000;
+                padding: .2rem;
+                display: none;
+                
+                
+
+                &__wrapper {
+                    background: #000;
+                    color: white;    
+                    padding: .5rem;
+                }
+            }
         }
 
-        &__header {
-            margin: 1.5rem 0 2rem;
+        &__text-wrapper {
+            padding: 2rem;
+            width: 90%;
+            margin: 0 auto;
+
+            &__header {
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                margin-bottom: 3rem;
+            }
         }
     }
 
@@ -21,21 +53,58 @@
 
 @media only screen and (min-width: 641px) {
     .content {
+        text-align: left;
         margin: 0 auto;
-        width: 90%;
+        // width: 90%;
 
         &__box {
             display: flex;
+            margin: 2rem 0;
+            background-color: #EEE;
 
-            &__wrapper {
-                width: 100%;
-                max-width: 50%;
+            &__img-wrapper {
+                
+                &__img {
+                    height: 100%;
+                    width: 300px;
+                }
+
+                &__discount-tag {
+                    display: block;
+                }
             }
 
-            &__img {
-                max-width: 100%;
-                min-height: 100%;
+            &__text-wrapper {
+                
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        &__box:first-of-type {
+            margin: 0;
+            margin-bottom: 2rem;
+        }
+
+        &__limited {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .content {
+        width: 70%;
+
+        &__box {
+            height: 400px;
+
+            &__img-wrapper {
+                min-width: 400px;
             }
         }
     }
 }
+
+

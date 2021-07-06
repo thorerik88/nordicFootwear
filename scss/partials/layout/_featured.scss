@@ -8,15 +8,38 @@
         margin-bottom: 1rem;
     }
 
-    &__item {
-        margin-bottom: 1rem;
-        text-align: center;
+    &__wrapper {
+
+        &__item {
+            margin-bottom: 3rem;
+            text-align: center;
+            
+            &__img {
+                width: 40%;
+                height: 40%;
+                border-radius: 50%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    .featured {
         
-        &__img {
-            width: 40%;
-            height: 40%;
-            border-radius: 50%;
-            margin: 0 .3rem;
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-evenly;
+        
+
+            &__item {
+
+                &__img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
         }
     }
 }

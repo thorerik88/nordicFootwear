@@ -1,14 +1,15 @@
 .category {
+    @include flexCenter;
     background:
         linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),
         url("../../../assets/mobile/snowy_background.svg");
     background-size: cover;
-    min-height: 350px;
+    background-repeat: no-repeat;
+    min-height: 280px;
     text-align: center;
-    padding: 100px 0 0 0;
 
     &__item {
-        display: inline-block;
+        // display: inline-block;
         width: 30%;
         text-align: center;
         
@@ -23,12 +24,41 @@
 
 @media only screen and (min-width: 641px) {
     .category {
-        
+        background:
+        linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),
+        url("../../../assets/desktop/snowy_background.svg");
+        min-height: 350px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
         &__item {
+
+            p {
+                font-size: $font-small-tab;
+            }
 
             &__img {
                 width: 150px;
                 height: 150px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .category {
+        min-height: 400px;
+
+        &__item {
+
+            p {
+                font-size: $font-small-desktop;
+            }
+
+            &__img {
+                width: 200px;
+                height: 200px;
             }
         }
     }
