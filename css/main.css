@@ -67,59 +67,6 @@
   font-size: 25px;
 }
 
-/* NAV DROPDOWN MENU */
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  display: none;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  width: 60%;
-  left: 0;
-  top: 0;
-  background: #003953;
-  padding: 1rem;
-  z-index: 2;
-}
-
-.dropdown__list {
-  list-style: none;
-}
-
-.dropdown__list li {
-  margin: 1.5rem 0;
-}
-
-.dropdown__list a {
-  color: white;
-}
-
-.dropdown__list i {
-  color: #d9534f;
-  font-size: 25px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.dropdown__list i::after {
-  content: url("../../../assets/mobile/logo_150x45_white.svg");
-  width: 100px;
-  height: 30px;
-  margin-right: 1rem;
-  background-size: cover;
-  float: right;
-  vertical-align: top;
-}
-
 @media only screen and (min-width: 641px) {
   .nav {
     padding: 0 4rem;
@@ -568,6 +515,62 @@ footer {
   .guarantee__item p {
     font-size: 20px;
   }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  width: 60%;
+  left: 0;
+  top: 0;
+  background: #003953;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.dropdown__list, .dropdown__login {
+  list-style: none;
+}
+
+.dropdown__list li, .dropdown__login li {
+  margin: 1.5rem 0;
+}
+
+.dropdown__list a, .dropdown__login a {
+  color: white;
+}
+
+.dropdown__list i, .dropdown__login i {
+  color: #d9534f;
+  font-size: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.dropdown__list i::after, .dropdown__login i::after {
+  content: url("../../../assets/mobile/logo_150x45_white.svg");
+  width: 100px;
+  height: 30px;
+  margin-right: 1rem;
+  background-size: cover;
+  float: right;
+  vertical-align: top;
+}
+
+.dropdown__login {
+  margin-top: 4rem;
 }
 
 html, body {
