@@ -3,6 +3,7 @@
     @include flexCenter; 
     box-shadow: 0 3px 10px rgba(0,0,0, .16);
     padding: 0 2rem;
+    position: relative;
 
        &__logo {
            order: 2;
@@ -17,7 +18,7 @@
             order: 1;
             width: 15%;
 
-            &__desktop {
+            &__wrapper {
                 display: none;
             }
        }
@@ -39,6 +40,60 @@
        }
    }
 
+   /* NAV DROPDOWN MENU */
+
+   .overlay {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       left: 0;
+       top: 0;
+       background-color: rgba(0,0,0,.5);
+       z-index: 1;
+       display: none;
+   }
+
+   .dropdown {
+        display: none;
+        position: absolute;
+        width: 60%;
+        left: 0;
+        top: 0;
+        background: $primary-color;
+        padding: 1rem;
+        z-index: 2;
+
+        &__list {
+            list-style: none;
+            
+            li {
+                margin: 1.5rem 0;
+            }
+
+            a {
+                color: white;
+            }
+
+            i {
+                color: $danger;
+                font-size: 25px; 
+                border-bottom: 1px solid rgba(255,255,255,.5);
+                padding-bottom: 1.5rem;
+                width: 100%;
+            }
+
+            i::after {
+                content: url("../../../assets/mobile/logo_150x45_white.svg");
+                width: 100px;
+                height: 30px;
+                margin-right: 1rem;
+                background-size: cover;
+                float: right;
+                vertical-align: top;
+            }
+        }
+   }
+
 @media only screen and (min-width: 641px) {
     .nav {
         padding: 0 4rem;
@@ -55,8 +110,12 @@
         &__navmenu {
             width: 60%;
 
-            &__desktop {
+            &__wrapper {
                 display: inline-block;
+                position: relative;
+                width: 100%;
+                background: white;
+                padding: 0;
 
                 &__list {
                     display: flex;
@@ -64,6 +123,14 @@
                     li {
                         list-style: none;
                         margin: 0 2rem;
+                    }
+
+                    li:first-of-type { 
+                        display: none;
+                    }
+
+                    a {
+                        color: $primary-color;
                     }
                 }
             }
