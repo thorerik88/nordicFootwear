@@ -13,23 +13,32 @@
     <nav class="nav">
         <div class="nav__logo"></div>
         <div class="nav__navmenu">
-            <div class="nav__navmenu__wrapper dropdown">
-                <ul class="nav__navmenu__wrapper__list dropdown__list">
-                    <li><i class="fa fa-times"></i></li>
+            <div class="nav__navmenu__wrapper">
+                <ul class="nav__navmenu__wrapper__list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Shoes</a></li>
                     <li><a href="#">Edit Shoes</a></li>
                 </ul>
-                <ul class="nav__navmenu__wrapper__list dropdown__login">
-                    <li><a href="#">Login</a></li>
-                </ul>
-
+                <div class="dropdown">
+                    <ul class="dropdown__list">
+                        <li><i class="fa fa-times"></i></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Edit Shoes</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
             </div>
             <i class="fa fa-bars"></i>
         </div>
         <div class="nav__icons">
-            <i class="fa fa-shopping-cart"></i>
-            <i class="fa fa-user"></i>
+            <div class="fa fa-shopping-cart nav__icons__shopping-cart">
+                <span class="nav__icons__shopping-cart__cart-quantity">1</span>
+            </div>
+            <div class="nav__icons__profile">
+                <span class="fa fa-user nav__icons__profile__icon"></span>
+                <span class="nav__icons__profile__message">Login</span>
+            </div>
         </div>
     </nav>
 

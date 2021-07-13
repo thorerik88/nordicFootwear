@@ -26,6 +26,10 @@
             margin: 1.5rem 0;
         }
 
+        li:last-of-type {
+            margin-top: 4rem;
+        }
+
         a {
             color: white;
         }
@@ -51,5 +55,11 @@
 
     &__login {
         margin-top: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .dropdown {
+        display: none;
     }
 }

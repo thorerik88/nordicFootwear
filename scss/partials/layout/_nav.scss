@@ -19,7 +19,10 @@
             width: 15%;
 
             &__wrapper {
-                display: none;
+                
+                &__list {
+                    display: none;
+                }
             }
        }
    
@@ -28,13 +31,35 @@
             order: 3;
             width: 15%;
 
-            i:first-of-type {
+            &__shopping-cart {
                 margin-left: auto;
                 margin-right: 1rem;
+                position: relative;
+                
+                &__cart-quantity {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    color: white;
+                    background: green;
+                    top: -4px;
+                    right: -7px;
+                    border-radius: 50%;
+                    font-size: 1rem;
+                    font-family: $text-large;
+                    // display: none;
+                }
+            }
+
+            &__profile {
+                display: none;
             }
        }
    
-       i {
+       .fa {
            color: $primary-color;
            font-size: $awesome-size;
        }
@@ -72,10 +97,6 @@
                         margin: 0 2rem;
                     }
 
-                    li:first-of-type { 
-                        display: none;
-                    }
-
                     a {
                         color: $primary-color;
                     }
@@ -84,6 +105,27 @@
 
             i {
                 display: none;
+            }
+        }
+
+        &__icons {
+            margin-top: 28px;
+
+            &__profile {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 auto;
+
+                &__icon {
+                    text-align: center;
+                }
+
+                &__message {
+                    margin-top: 4px;
+                    font-size: $font-small;
+                    font-family: $text-small;
+                }
             }
         }
     }

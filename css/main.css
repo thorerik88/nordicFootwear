@@ -43,7 +43,7 @@
   width: 15%;
 }
 
-.nav__navmenu__wrapper {
+.nav__navmenu__wrapper__list {
   display: none;
 }
 
@@ -57,12 +57,38 @@
   width: 15%;
 }
 
-.nav__icons i:first-of-type {
+.nav__icons__shopping-cart {
   margin-left: auto;
   margin-right: 1rem;
+  position: relative;
 }
 
-.nav i {
+.nav__icons__shopping-cart__cart-quantity {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1.2rem;
+  height: 1.2rem;
+  color: white;
+  background: green;
+  top: -4px;
+  right: -7px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.nav__icons__profile {
+  display: none;
+}
+
+.nav .fa {
   color: #003953;
   font-size: 25px;
 }
@@ -98,14 +124,35 @@
     list-style: none;
     margin: 0 2rem;
   }
-  .nav__navmenu__wrapper__list li:first-of-type {
-    display: none;
-  }
   .nav__navmenu__wrapper__list a {
     color: #003953;
   }
   .nav__navmenu i {
     display: none;
+  }
+  .nav__icons {
+    margin-top: 28px;
+  }
+  .nav__icons__profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+  .nav__icons__profile__icon {
+    text-align: center;
+  }
+  .nav__icons__profile__message {
+    margin-top: 4px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
   }
 }
 
@@ -547,6 +594,10 @@ footer {
   margin: 1.5rem 0;
 }
 
+.dropdown__list li:last-of-type, .dropdown__login li:last-of-type {
+  margin-top: 4rem;
+}
+
 .dropdown__list a, .dropdown__login a {
   color: white;
 }
@@ -571,6 +622,12 @@ footer {
 
 .dropdown__login {
   margin-top: 4rem;
+}
+
+@media only screen and (min-width: 1008px) {
+  .dropdown {
+    display: none;
+  }
 }
 
 html, body {
