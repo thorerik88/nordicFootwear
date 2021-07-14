@@ -120,11 +120,11 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .nav__navmenu__wrapper__list li {
+  .nav__navmenu__wrapper__list__item {
     list-style: none;
     margin: 0 2rem;
   }
-  .nav__navmenu__wrapper__list a {
+  .nav__navmenu__wrapper__list__item a {
     color: #003953;
   }
   .nav__navmenu i {
@@ -459,6 +459,10 @@ a.shop-btn {
 }
 
 @media only screen and (min-width: 641px) {
+  .featured {
+    background-color: #eee;
+    width: 100%;
+  }
   .featured__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;

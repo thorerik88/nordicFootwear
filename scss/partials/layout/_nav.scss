@@ -92,13 +92,13 @@
                 &__list {
                     display: flex;
 
-                    li {
+                    &__item {
                         list-style: none;
                         margin: 0 2rem;
-                    }
 
-                    a {
-                        color: $primary-color;
+                        a {
+                            color: $primary-color;
+                        }
                     }
                 }
             }
