@@ -13,6 +13,9 @@
 @import './partials/layout/guarantee';
 @import './partials/layout/dropdown';
 @import './partials/layout/shopping-cart';
+@import './partials/layout/search';
+
+@import './partials/general/info-header';
 
 html, body {
     color: $primary-color;
