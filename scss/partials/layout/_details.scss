@@ -1,0 +1,49 @@
+.details {
+    margin: 2rem auto;
+
+    &__box {
+        background-color: #eee;
+        max-width: 75%;
+        margin: 0 auto;
+        text-align: center;
+        
+        &__img {
+            width: 100%;
+        }
+
+        &__wrapper {
+            text-align: left;
+            padding: 0 2rem 2rem;
+
+            &__title {
+                margin: 1.5rem 0;
+            }
+
+            &__price {
+                margin: 1.5rem 0 2.5rem;
+                font-weight: bold;
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    .details {
+
+        &__box {
+            max-width: 60%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1007px) {
+    .details {
+        margin: 5rem auto;
+
+        &__box {
+            max-width: 90%;
+            display: flex;
+        }
+    }
+}

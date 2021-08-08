@@ -1,5 +1,5 @@
 .search {
-    margin: 1rem;
+    margin: 2rem;
     text-align: center;
 
     &__user-input {
@@ -17,7 +17,7 @@
 
         &__icon {
             position: absolute;
-            right: 35px;
+            right: 8%;
             top: 16px;
             font-size: 26px;
         }
@@ -29,9 +29,9 @@
         align-items: center;
 
         &__box {
-            max-width: 90%;
-            text-align: left;
+            max-width: 300px;
             margin-bottom: 2rem;
+            // text-align: left;
 
             &__img {
                 max-width: 300px;
@@ -41,6 +41,53 @@
             &__title {
                 margin: .5rem 0;
             }
+
+            &__img, &__title, &__price {
+                text-align: left;
+            }
         }
     }
 }
+
+@media only screen and (min-width: 641px) {
+   .search {
+       &__results {
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: space-around;
+
+           &__box {
+               flex: 50%;
+               max-width: 250px;
+
+               &__img {
+                   max-width: 250px;
+                   min-width: 250px;
+               }
+           }
+       }
+   }
+}
+
+@media only screen and (min-width: 1007px) {
+    .search {
+
+        &__user-input {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        &__results {
+ 
+            &__box {
+                flex: 50%;
+                max-width: 200px;
+ 
+                &__img {
+                    max-width: 200px;
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+ }

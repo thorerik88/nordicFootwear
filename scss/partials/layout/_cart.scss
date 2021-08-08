@@ -1,0 +1,36 @@
+.cart {
+    margin: 4rem auto;
+    max-width: 90%;
+    
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem auto;   
+        width: 100%;
+        max-width: 700px;
+        background-color: #eee;     
+
+        &__img {
+            max-height: 120px;
+            max-width: 120px;
+        }
+
+        &__text {
+            margin: 1rem;
+        }
+
+        &__price {
+            margin: 1rem;
+        }
+    }
+
+    &__total {
+        margin: 0 auto;
+        border-top: 1px solid black;
+        padding-top: 1rem;
+        max-width: 700px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
