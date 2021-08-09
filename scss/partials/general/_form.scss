@@ -7,6 +7,8 @@
         flex-direction: column;
 
         label {
+            display: flex;
+            flex-direction: column;
             font-size: $font-small;
             font-family: $text-small;
             font-weight: bold;
@@ -26,15 +28,6 @@
             margin: 1rem auto;
         }
 
-        &__submit--edit {
-           background-color: #DFD016 !important;
-        }
-
-        &__submit--delete {
-            background-color: #9C1919 !important;
-            color: white;
-        }
-
         textarea {
             min-height: 200px;
         }
@@ -44,9 +37,22 @@
             height: 30px;
             width: 30px;
         }
+
+        &__submit--edit {
+            background-color: #DFD016 !important;
+         }
+ 
+         &__submit--delete {
+             background-color: #9C1919 !important;
+             color: white;
+         }
+
+         &__error {
+             color: #9C1919;
+             display: none;
+         }
     }
 }
-
 
 
 

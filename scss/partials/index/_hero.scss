@@ -1,5 +1,4 @@
 .hero {
-    background-image: url('../../../assets/mobile/bergen_750x422.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -29,7 +28,6 @@
 
 @media only screen and (min-width: 1008px) {
     .hero {
-        background-image: url('../../../assets/desktop/bergen_1000x563.jpeg');
         min-height: 500px;
         padding: 8rem 0 0 0;
 

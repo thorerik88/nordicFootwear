@@ -1,24 +1,27 @@
 @import './partials/resets';
 @import './partials/variables';
-
-@import './partials/layout/nav';
-@import './partials/layout/hero';
-@import './partials/layout/ads';
-@import './partials/layout/category';
 @import './partials/layout/typography';
-@import './partials/layout/button';
-@import './partials/layout/content';
-@import './partials/layout/featured';
-@import './partials/layout/footer';
-@import './partials/layout/guarantee';
-@import './partials/layout/dropdown';
-@import './partials/layout/shopping-cart';
-@import './partials/layout/search';
-@import './partials/layout/details';
-@import './partials/layout/cart';
-@import './partials/layout/form';
 
+@import './partials/general/user-messages';
+@import './partials/general/nav';
+@import './partials/general/dropdown';
+@import './partials/general/form';
 @import './partials/general/info-header';
+@import './partials/general/button';
+@import './partials/general/featured';
+@import './partials/general/footer';
+
+@import './partials/index/hero';
+@import './partials/index/category';
+@import './partials/index/ads';
+@import './partials/index/guarantee';
+@import './partials/index/content';
+
+@import './partials/unique/shopping-cart';
+@import './partials/unique/search';
+@import './partials/unique/details';
+@import './partials/unique/cart';
+
 
 html, body {
     color: $primary-color;
@@ -28,4 +31,3 @@ html, body {
 body {
     position: relative;
 }
-
