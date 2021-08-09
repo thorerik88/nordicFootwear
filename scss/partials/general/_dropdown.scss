@@ -21,6 +21,10 @@
 
     &__list, &__login {
         list-style: none;
+
+        .login {
+            color: white;
+        }
         
         li {
             margin: 1.5rem 0;

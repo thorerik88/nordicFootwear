@@ -1,5 +1,7 @@
-import displayMessage from "./components/common/displayMessage.js";
+import displayMessage from "./components/displayMessage.js";
+import { saveToken, saveUser  } from "./components/localStorage.js";
 import { baseUrl } from "./settings/api.js";
+
 
 
 const form = document.querySelector("form")
@@ -9,6 +11,7 @@ const message = document.querySelector(".message-container");
 
 form.addEventListener("submit", submitForm);
 
+// Check for validation before API call
 function submitForm(event) {
     event.preventDefault();
 
@@ -24,6 +27,7 @@ function submitForm(event) {
     login(usernameValue, passwordValue)
 }
 
+// Login API call
 async function login(username, password) {
     const url = baseUrl + "/auth/local";
 
@@ -39,15 +43,18 @@ async function login(username, password) {
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json)
+
+
 
         if (json.error) {
             displayMessage("warning", json.message[0].messages[0].message, ".message-container");
-        } else {
-            displayMessage ("success", "You are logged in", ".message-container");
-            setTimeout(function() {
-                document.location.href="/";
-            }, 2000);
+        } 
+        if (json.user) {    
+            // displayMessage ("success", "You are logged in", ".message-container");
+            location.href = "/";
+
+            saveToken(json.jwt);
+            saveUser(json.user);
         }
 
     } catch(error) {

@@ -1,8 +1,8 @@
-import { baseUrl } from "./../settings/api.js";
+import { baseUrl } from "./settings/api.js";
 
 const imageUrl = baseUrl + "/home";
 
-
+// Fetch hero background image from api
 (async function() {
     const hero = document.querySelector(".hero");
 
@@ -18,5 +18,4 @@ const imageUrl = baseUrl + "/home";
     catch(error) {
         console.log(error);
     }
-
 })();

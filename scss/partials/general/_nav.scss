@@ -64,6 +64,10 @@
            font-size: $awesome-size;
        }
    }
+
+   .active {
+       font-weight: bold;
+   }
   
 
 @media only screen and (min-width: 641px) {
@@ -116,6 +120,7 @@
                 flex-direction: column;
                 justify-content: center;
                 margin: 0 auto;
+                cursor: pointer;
 
                 &__icon {
                     text-align: center;

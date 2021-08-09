@@ -178,6 +178,10 @@ li {
   font-size: 25px;
 }
 
+.active {
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 641px) {
   .nav {
     padding: 0 4rem;
@@ -230,6 +234,7 @@ li {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0 auto;
+    cursor: pointer;
   }
   .nav__icons__profile__icon {
     text-align: center;
@@ -265,6 +270,10 @@ li {
 
 .dropdown__list, .dropdown__login {
   list-style: none;
+}
+
+.dropdown__list .login, .dropdown__login .login {
+  color: white;
 }
 
 .dropdown__list li, .dropdown__login li {
@@ -487,6 +496,10 @@ footer {
 
 .footer-wrapper__social__item i {
   font-size: 25px;
+}
+
+.admin {
+  display: none;
 }
 
 .hero {
