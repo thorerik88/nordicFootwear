@@ -1,0 +1,58 @@
+.form-wrapper {
+    margin: 2rem auto;
+    max-width: 80%;
+
+   .form {
+        display: flex; 
+        flex-direction: column;
+
+        label {
+            font-size: $font-small;
+            font-family: $text-small;
+            font-weight: bold;
+            margin: 1rem 0 .3rem;
+        }
+
+        input, textarea {
+            border: 1px solid $light-green;
+            border-radius: 10px;
+            font-size: $font-medium;
+            padding: .4rem;
+        }
+
+        input[type="submit"] {
+            width: 50%;
+            background-color: $light-green;
+            margin: 1rem auto;
+        }
+
+        &__submit--edit {
+           background-color: #DFD016 !important;
+        }
+
+        &__submit--delete {
+            background-color: #9C1919 !important;
+            color: white;
+        }
+
+        textarea {
+            min-height: 200px;
+        }
+
+        input[type="checkbox"] {
+            background-color: $light-green;
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 641px) {
+    .form-wrapper {
+        max-width: 500px;
+    }
+}

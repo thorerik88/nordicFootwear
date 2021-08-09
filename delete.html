@@ -44,37 +44,25 @@
         </div>
     </nav>
 
-    <div class="info-header">
-        <h2 class="info-header__header">Shopping Cart</h2>
+    <div class="info-header info-header--delete">
+        <h2 class="info-header__header">Delete shoes</h2>
     </div>
     
-    <div class="cart">
-        <div class="cart__item">
-            <img class="cart__item__img" src="./assets/mobile/running.jpg" alt="">
-            <div class="cart__item__text">
-                <h3 class="cart__item__text__title">Title</h3>
-                <a href="" class="cart__item__text__details">Click to view details</a>
-            </div>
-            <div class="cart__item__price">
-                <p>$99.99</p>
-            </div>
-        </div>
-        <div class="cart__item">
-            <img class="cart__item__img" src="./assets/mobile/running.jpg" alt="">
-            <div class="cart__item__text">
-                <h3 class="cart__item__text__title">Title</h3>
-                <a href="" class="cart__item__text__details">Click to view details</a>
-            </div>
-            <div class="cart__item__price">
-                <p>$99.99</p>
-            </div>
-        </div>
-        <div class="cart__total">
-            <h3>SUM</h3>
-            <h3>$199.99</h3>
-        </div>
+    <div class="form-wrapper">
+        <form class="form" action="">
+            <label for="id">ID</label>
+            <input class="form__id" type="text" name="id">
+            <label for="title">Title</label>
+            <input class="form__title" type="text" name="title">
+            <label for="price">Price</label>
+            <input class="form__price" type="text" name="price">
+            <label for="description">Description</label>
+            <textarea class="form__description" type="textarea" name="description"></textarea>
+            
+            <input class="form__submit--delete" type="submit" value="Delete">
+        </form>
     </div>
-
+    
     <div class="featured">
         <h3>Featured products:</h3>
         <div class="featured__wrapper">
