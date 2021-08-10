@@ -32,7 +32,7 @@ function submitForm(e) {
         if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageUrlValue.length === 0 || descriptionValue.length === 0) {
             displayMessage("warning", "Please, add all values", ".message-container");
         } else {
-            addProduct("add", titleValue, priceValue, imageUrlValue, descriptionValue, featuredValue);
+            addProduct(titleValue, priceValue, imageUrlValue, descriptionValue, featuredValue);
             return
         }
     }
@@ -42,7 +42,7 @@ function submitForm(e) {
         if(idValue.length === 0 || isNaN(idValue) || titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageUrlValue.length === 0 || descriptionValue.length === 0) {
             displayMessage("warning", "Please, add all values", ".message-container");
         } else {
-            addProduct("edit", idValue, titleValue, priceValue, imageUrlValue, descriptionValue, featuredValue);
+            addProduct(idValue, titleValue, priceValue, imageUrlValue, descriptionValue, featuredValue);
         }
     }
 }

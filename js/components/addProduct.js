@@ -1,34 +1,22 @@
 import { baseUrl } from "../settings/api.js";
 import { getToken } from "./localStorage.js";
 
-export default async function addProduct(postType, id, title, price, imageUrl, description, featured) {
+export default async function addProduct(title, price, imageUrl, description, featured) {
+    
+    const data = JSON.stringify({ 
+        title: title,
+        price: price,
+        imageUrl: imageUrl,
+        description: description,
+        featured: featured
+    });  
+    apiCall(data)
+}
+
+async function apiCall(data) {
+    console.log(data)
     const url = baseUrl + "/products";
-
-    const addData = JSON.stringify({ 
-        title: title,
-        price: price,
-        imageUrl: imageUrl,
-        description: description,
-        featured: featured  
-    });
-
-    const editData = JSON.stringify({
-        id: id,
-        title: title,
-        price: price,
-        imageUrl: imageUrl,
-        description: description,
-        featured: featured  
-    });
-
     const token = getToken();
-
-    let data;
-    if (postType === "add") {
-        data = addData;
-    } else {
-        data = editData;
-    }
 
     const options = {
         method: "POST",
