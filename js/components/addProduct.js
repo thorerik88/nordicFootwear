@@ -2,19 +2,18 @@ import { baseUrl } from "../settings/api.js";
 import { getToken } from "./localStorage.js";
 
 export default async function addProduct(title, price, imageUrl, description, featured) {
-    
     const data = JSON.stringify({ 
         title: title,
         price: price,
-        imageUrl: imageUrl,
+        image_url: imageUrl,
         description: description,
-        featured: featured
+        featured: featured,
     });  
+    console.log(data)
     apiCall(data)
 }
 
 async function apiCall(data) {
-    console.log(data)
     const url = baseUrl + "/products";
     const token = getToken();
 
