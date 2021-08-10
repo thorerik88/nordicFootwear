@@ -44,3 +44,31 @@ footerLogin.addEventListener("click", function() {
     }
 })
 
+// mobile dropdown menu
+
+const mobileOpen = document.querySelector(".fa-bars");
+const mobileClose = document.querySelector(".fa-times");
+const overlay = document.querySelector(".overlay");
+const mobileMenu = document.querySelector(".dropdown");
+
+mobileOpen.addEventListener("click", function() {
+    if (overlay.style.display !== "block") {
+        overlay.style.display = "block";
+        mobileMenu.style.display = "block";
+    }
+})
+
+mobileClose.addEventListener("click", function() {
+    if (overlay.style.display === "block") {
+        overlay.style.display = "none";
+        mobileMenu.style.display = "none";
+    }
+})
+
+window.onclick = function(event) {
+    if (event.target === overlay) {
+        overlay.style.display = "none";
+        mobileMenu.style.display = "none";
+    }
+}
+

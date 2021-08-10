@@ -63,12 +63,23 @@
            color: $primary-color;
            font-size: $awesome-size;
        }
+
+       .fa-times {
+           color: #A40C0A;
+       }
    }
 
    .active {
        font-weight: bold;
    }
   
+   .login-message {
+       position: absolute;
+       right: 1%;
+       top: 3px;
+       font-family: $text-small;
+       font-size: 14px;
+   }
 
 @media only screen and (min-width: 641px) {
     .nav {
@@ -98,10 +109,11 @@
 
                     &__item {
                         list-style: none;
-                        margin: 0 2rem;
+                        margin: 0 1rem;
 
                         a {
                             color: $primary-color;
+                            font-size: 18px;
                         }
                     }
                 }
@@ -133,5 +145,8 @@
                 }
             }
         }
+    }
+    .login-message {
+        display: none;
     }
 }

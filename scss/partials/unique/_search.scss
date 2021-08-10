@@ -36,6 +36,8 @@
             &__img {
                 max-width: 300px;
                 min-width: 300px;
+                max-height: 250px;
+                min-height: 250px;
             }
 
             &__title {
@@ -86,6 +88,8 @@
                 &__img {
                     max-width: 200px;
                     min-width: 200px;
+                    max-height: 160px;
+                    min-height: 160px;
                 }
             }
         }

@@ -34,6 +34,7 @@ export default function createNav() {
     const navContainer = document.querySelector(".nav");
 
     navContainer.innerHTML = `
+    <span class="login-message">You are not logged in</span>
     <div class="nav__logo"></div>
     <div class="nav__navmenu">
         <div class="nav__navmenu__wrapper">
@@ -63,4 +64,16 @@ export default function createNav() {
         </div>
     </div>
     `;
+
+    // change login message
+    const loginContainer = document.querySelector(".login-message");
+    const profileIcon = document.querySelector(".fa-user");
+    if (username !== undefined) {
+        loginContainer.innerHTML = `Welcome ${username}`;
+        profileIcon.style.color = "green";
+    } else {
+        profileIcon.style.color = "inherit";
+    }
+
+
 }

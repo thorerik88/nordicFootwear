@@ -38,6 +38,10 @@
             width: 30px;
         }
 
+        input[type="submit"] {
+            cursor: pointer;
+        }
+
         &__submit--edit {
             background-color: #DFD016 !important;
          }

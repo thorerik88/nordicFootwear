@@ -103,6 +103,13 @@
             &__img-wrapper {
                 min-width: 400px;
             }
+
+            &__text-wrapper {
+
+                &__shop-btn:hover {
+                    background-color: $light-green;
+                }
+            }
         }
     }
 }
