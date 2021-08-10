@@ -52,7 +52,7 @@ async function login(username, password) {
         if (json.user) {    
             // displayMessage ("success", "You are logged in", ".message-container");
             location.href = "/";
-
+            console.log(json.jwt)
             saveToken(json.jwt);
             saveUser(json.user);
         }
