@@ -158,9 +158,6 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 1.2rem;
@@ -436,12 +433,20 @@ li {
   background-color: rgba(156, 25, 25, 0.1);
 }
 
-a.shop-btn, input[type="submit"] {
+p.shop-btn, a.shop-btn, input[type="submit"] {
   color: #003953;
   border: 5px solid #78BF8D;
   padding: .3rem 2rem;
   border-radius: 12px;
   font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1007px) {
+  p.shop-btn {
+    max-width: 200px;
+  }
 }
 
 .featured {
@@ -542,6 +547,22 @@ footer {
 
 .admin {
   display: none;
+}
+
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.breadcrumb a {
+  font-weight: bold;
+}
+
+.breadcrumb p, .breadcrumb a {
+  margin: 25px 5px 0;
 }
 
 .hero {
@@ -844,6 +865,7 @@ footer {
 .search__results__box {
   max-width: 300px;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .search__results__box__img {
@@ -947,6 +969,11 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .details__box__img {
+    min-height: 100%;
+    max-height: 450px;
+    max-width: 420px;
   }
 }
 

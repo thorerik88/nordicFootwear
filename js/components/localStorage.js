@@ -1,5 +1,12 @@
+import updateCart from "./updateCart.js";
+
 const tokenKey = "token";
+const idKey = "id";
 export const userKey = "user";
+
+export function saveProduct(id) {
+    saveProductToStorage(idKey, id);
+}
 
 export function saveToken(token) {
     saveToStorage(tokenKey, token);
@@ -31,7 +38,7 @@ function saveToStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
 
-function getFromStorage(key) {
+export function getFromStorage(key) {
     const value = localStorage.getItem(key);
 
     if (!value) {
@@ -40,3 +47,31 @@ function getFromStorage(key) {
 
     return JSON.parse(value);
 }
+
+function saveProductToStorage(key, value) {
+    let cartList = [];
+
+    if (getFromStorage(key).length === 0) {
+        cartList.push(value)
+        saveToStorage(key, cartList);
+    } else {
+        const existingCart = getFromStorage(key);
+        
+        const filteredCart = existingCart.filter(function(id) {
+            if (id === value) {
+                return true;
+            }
+        })       
+        
+        if (filteredCart.length === 0) {
+            cartList = existingCart;
+            cartList.push(value);    
+            saveToStorage(key, cartList)
+        }
+    }
+}
+
+
+
+
+

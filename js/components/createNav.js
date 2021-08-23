@@ -1,9 +1,11 @@
 import { getUsername } from "../components/localStorage.js";
+import updateCart from "./updateCart.js";
+
+const cartQty = updateCart();
 
 // render NAV menu
 export default function createNav() {
     const { pathname } = document.location;
-
     const username = getUsername();
 
     // change login/logout based on status
@@ -56,7 +58,7 @@ export default function createNav() {
     </div>
     <div class="nav__icons">
         <div class="fa fa-shopping-cart nav__icons__shopping-cart">
-            <span class="nav__icons__shopping-cart__cart-quantity">1</span>
+            <span class="nav__icons__shopping-cart__cart-quantity">${cartQty}</span>
         </div>
         <div class="nav__icons__profile">
             <span class="fa fa-user nav__icons__profile__icon"></span>

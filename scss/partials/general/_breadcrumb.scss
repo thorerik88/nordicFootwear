@@ -1,0 +1,13 @@
+.breadcrumb {
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+
+    a {
+        font-weight: bold;
+    }
+
+    p, a {
+        margin: 25px 5px 0;
+    }
+}

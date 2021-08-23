@@ -6,6 +6,9 @@ export default function createHtml(json, container) {
         
         // check type of image url
         let imageUrl;
+        const id = element.id;
+        console.log(id)
+
         if (element.image_url === null || element.image_url === "") {
             imageUrl = baseUrl + element.image.url;
         } else {
@@ -13,7 +16,7 @@ export default function createHtml(json, container) {
         }
 
         container.innerHTML += `
-        <div class="search__results__box">
+        <div class="search__results__box" id="${id}" >
             <img class="search__results__box__img" src="${imageUrl}" alt="">
             <p class="search__results__box__title">${element.title}</p>
             <p class="search__results__box__price">$${element.price}</p>

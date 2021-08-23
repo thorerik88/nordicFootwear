@@ -13,8 +13,9 @@ const shoes = baseUrl + "/products";
     try {
         const response = await fetch(shoes);
         const json = await response.json();
-        createHtml(json, container);
 
+        createHtml(json, container);
+        
         if (json.length === 0) {
             console.log("empty")
             displayMessage("warning", "No shoes to display", ".message-container");
@@ -23,11 +24,26 @@ const shoes = baseUrl + "/products";
                 searchShoes(json, e);
             })
         }
+
+        // open details page and add id to url
+        const imageContainer = document.querySelectorAll(".search__results__box");
+        // const detailsUrl = location.href = "details.html";
+
+        imageContainer.forEach(box => {
+            box.addEventListener('click', (e)=>{
+                let boxId = e.target.parentNode.id;
+                let url = "/details.html?id=" + boxId;
+                location.href = url;
+            })
+        })
     } 
     catch(error) {
         console.log(error);
     }
 })();
+
+
+
 
 
 
