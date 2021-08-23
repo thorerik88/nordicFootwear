@@ -13,23 +13,27 @@
     <nav class="nav"></nav>
 
     <div class="info-header info-header--edit">
-        <h2 class="info-header__header">Add details</h2>
+        <h2 class="info-header__header">Edit details</h2>
     </div>
     
     <div class="form-wrapper">
         <form class="form" action="">
             <label for="title">Title</label>
-            <input class="form__title" type="text" name="title">
+            <input class="form__title" type="text" name="title" disabled>
             <label for="price">Price</label>
-            <input class="form__price" type="text" name="price">
+            <input class="form__price" type="text" name="price" disabled>
             <label for="image_url">image URL</label>
-            <input class="form__image-url" type="text" name="image_url">
+            <input class="form__image-url" type="text" name="image_url" disabled>
             <label for="description">Description</label>
-            <textarea class="form__description" type="textarea" name="description"></textarea>
+            <textarea class="form__description" type="textarea" name="description" disabled></textarea>
             <label for="featured">Featured</label>
-            <input type="checkbox">
+            <input type="checkbox" disabled>
+            <label for="id">Id</label>
+            <input class="form__id" name="id" type="text">
 
-            <input class="form__submit--add" type="submit" value="Add">
+            <input class="form__submit--update" type="submit" value="Get Product">
+            <input class="form__submit--add" type="submit" value="Submit">
+            <input class="form__submit--delete" type="submit" value="Delete">
             <div class="message-container"></div>
         </form>
     </div>
@@ -55,6 +59,6 @@
     </div>
     <footer class="footer-container"></footer>
     <script src="js/script.js" type="module"></script>
-    <script src="js/add.js" type="module"></script>
+    <script src="js/edit.js" type="module"></script>
 </body>
 </html>

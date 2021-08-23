@@ -42,13 +42,22 @@
             cursor: pointer;
         }
 
-        &__submit--edit {
-            background-color: #DFD016 !important;
-         }
+        input:disabled, textarea:disabled, input[type="checkbox"]:disabled {
+            background-color: lightgrey;
+        }
  
          &__submit--delete {
              background-color: #9C1919 !important;
              color: white;
+             display: none;
+         }
+
+         &__submit--add {
+             display: none;
+         }
+
+         &__submit--update {
+            background-color: #DFD016 !important;
          }
 
          &__error {
@@ -57,9 +66,6 @@
          }
     }
 }
-
-
-
 
 @media only screen and (min-width: 641px) {
     .form-wrapper {

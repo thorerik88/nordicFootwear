@@ -79,6 +79,7 @@ li {
 .message-container {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .success, .warning, .error {
@@ -392,13 +393,22 @@ li {
   cursor: pointer;
 }
 
-.form-wrapper .form__submit--edit {
-  background-color: #DFD016 !important;
+.form-wrapper .form input:disabled, .form-wrapper .form textarea:disabled, .form-wrapper .form input[type="checkbox"]:disabled {
+  background-color: lightgrey;
 }
 
 .form-wrapper .form__submit--delete {
   background-color: #9C1919 !important;
   color: white;
+  display: none;
+}
+
+.form-wrapper .form__submit--add {
+  display: none;
+}
+
+.form-wrapper .form__submit--update {
+  background-color: #DFD016 !important;
 }
 
 .form-wrapper .form__error {
@@ -451,8 +461,8 @@ a.shop-btn, input[type="submit"] {
 }
 
 .featured__wrapper__item__img {
-  width: 40%;
-  height: 40%;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
@@ -466,9 +476,13 @@ a.shop-btn, input[type="submit"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .featured__wrapper__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 21%;
+            flex: 0 0 21%;
   }
   .featured__wrapper__item__img {
     width: 150px;

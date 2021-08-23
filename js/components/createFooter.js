@@ -22,8 +22,8 @@ export default function createFooter() {
         footerMenu = `
             <li class="footer-wrapper__menu__item"><a href="/index.html">HOME</a></li>
                 <li class="footer-wrapper__menu__item"><a href="/shoes.html">SHOES</a></li>
-                <li class="footer-wrapper__menu__item"><a href="/add.html">ADD/EDIT SHOES</a></li>
-                <li class="footer-wrapper__menu__item"><a href="/delete.html">DELETE SHOES</a></li>
+                <li class="footer-wrapper__menu__item"><a href="/add.html">ADD SHOES</a></li>
+                <li class="footer-wrapper__menu__item"><a href="/edit.html">EDIT SHOES</a></li>
                 ${loginStatus}
         `
     }

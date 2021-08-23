@@ -24,8 +24,8 @@ export default function createNav() {
         desktopOptions = `
         <li class="nav__navmenu__wrapper__list__item"><a href="/index.html" class="${pathname === "/index.html" ? "active" : ""}">Home</a></li>
         <li class="nav__navmenu__wrapper__list__item"><a href="/shoes.html" class="${pathname === "/shoes.html" ? "active" : ""}">Shoes</a></li>
-        <li class="nav__navmenu__wrapper__list__item"><a href="/add.html" class="${pathname === "/add.html" ? "active" : ""}">Add/Edit Shoes</a></li>
-        <li class="nav__navmenu__wrapper__list__item"><a href="/delete.html" class="${pathname === "/delete.html" ? "active" : ""}">Delete Shoes</a></li>
+        <li class="nav__navmenu__wrapper__list__item"><a href="/add.html" class="${pathname === "/add.html" ? "active" : ""}">Add Shoes</a></li>
+        <li class="nav__navmenu__wrapper__list__item"><a href="/edit.html" class="${pathname === "/edit.html" ? "active" : ""}">Edit Shoes</a></li>
         `
     }
     
@@ -46,8 +46,8 @@ export default function createNav() {
                     <li><i class="fa fa-times"></i></li>
                     <li><a href="/" class="${pathname === "/" ? "active" : ""}">Home</a></li>
                     <li><a href="/shoes.html" class="${pathname === "/shoes.html" ? "active" : ""}">Shoes</a></li>
-                    <li><a href="/add.html" class="${pathname === "/add.html" ? "active" : ""}">Add/Edit Shoes</a></li>
-                    <li><a href="/delete.html" class="${pathname === "/delete.html" ? "active" : ""}">Delete Shoes</a></li>
+                    <li><a href="/add.html" class="${pathname === "/add.html" ? "active" : ""}">Add Shoes</a></li>
+                    <li><a href="/edit.html" class="${pathname === "/edit.html" ? "active" : ""}">Edit Shoes</a></li>
                     ${mobileStatus}
                 </ul>
             </div>

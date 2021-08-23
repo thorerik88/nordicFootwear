@@ -1,0 +1,10 @@
+export const form = document.querySelector(".form");
+export const idInput = document.querySelector(".form__id");
+export const title = document.querySelector(".form__title");
+export const price = document.querySelector(".form__price");
+export const imageUrl = document.querySelector(".form__image-url");
+export const description = document.querySelector(".form__description");
+export const featured = document.querySelector("input[type='checkbox']");
+export const message = document.querySelector(".message-container");
+export const delButton = document.querySelector(".form__submit--delete");
+export const addButton = document.querySelector(".form__submit--add");

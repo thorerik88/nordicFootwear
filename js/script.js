@@ -1,6 +1,7 @@
 import createNav from "./components/createNav.js";
 import createFooter from "./components/createFooter.js";
 import { clearStorage, getUsername, userKey } from "./components/localStorage.js";
+import createFeatured from "./components/createFeatured.js";
 
 const username = getUsername();
 const { pathname } = document.location;
@@ -11,6 +12,7 @@ if (pathname === "/add.html" && username === undefined || pathname === "/delete.
 
 createNav();
 createFooter();
+createFeatured();
 
 // login nav button
 const loginButton = document.querySelector(".nav__icons__profile");

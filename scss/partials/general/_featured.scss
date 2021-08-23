@@ -15,8 +15,8 @@
             text-align: center;
             
             &__img {
-                width: 40%;
-                height: 40%;
+                width: 150px;
+                height: 150px;
                 border-radius: 50%;
                 margin-bottom: 1rem;
             }
@@ -31,10 +31,12 @@
 
         &__wrapper {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
         
 
             &__item {
+                flex: 0 0 21%;
+                
 
                 &__img {
                     width: 150px;
