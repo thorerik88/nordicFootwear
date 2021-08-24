@@ -1,7 +1,7 @@
-import { baseUrl } from "./settings/api.js";
-import { saveProduct } from "./components/localStorage.js";
-import updateCart from "./components/updateCart.js";
-import createNav from "./components/createNav.js";
+import { baseUrl } from "../settings/api.js";
+import { saveProduct } from "./localStorage.js";
+import updateCart from "./updateCart.js";
+import createNav from "./createNav.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
