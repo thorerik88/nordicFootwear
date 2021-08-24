@@ -3,6 +3,7 @@
     max-width: 90%;
     
     &__item {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -13,6 +14,7 @@
 
         &__img {
             max-height: 120px;
+            min-width: 120px;
             max-width: 120px;
         }
 
@@ -21,7 +23,19 @@
         }
 
         &__price {
-            margin: 1rem;
+            margin: 1.8rem 1rem 0;
+            vertical-align: bottom;
+        }
+
+        &__delete {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: $font-medium;
+            font-weight: bold;
+            font-family: $text-small;
+            color: #A40C0A;
+            cursor: pointer;
         }
     }
 

@@ -5,69 +5,69 @@
     padding: 0 2rem;
     position: relative;
 
-       &__logo {
-           order: 2;
-           background-image: url("./../assets/mobile/logo_150x45.svg");
-           background-size: cover;
-           width: 150px;
-           height: 45px;
-           margin: 1.5rem 1rem;
-       }
-   
-       &__navmenu {
-            order: 1;
-            width: 15%;
+    &__logo {
+        order: 2;
+        background-image: url("./../assets/mobile/logo_150x45.svg");
+        background-size: cover;
+        width: 150px;
+        height: 45px;
+        margin: 1.5rem 1rem;
+    }
 
-            &__wrapper {
-                
-                &__list {
-                    display: none;
-                }
-            }
-       }
-   
-       &__icons {
-            display: flex;
-            order: 3;
-            width: 15%;
+    &__navmenu {
+        order: 1;
+        width: 15%;
 
-            &__shopping-cart {
-                margin-left: auto;
-                margin-right: 1rem;
-                position: relative;
-                cursor: pointer;
-                
-                &__cart-quantity {
-                    position: absolute;
-                    display: flex;
-                    justify-content: space-around;
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    color: white;
-                    background: green;
-                    top: -4px;
-                    right: -7px;
-                    border-radius: 50%;
-                    font-size: 1rem;
-                    font-family: $text-large;
-                    // display: none;
-                }
-            }
-
-            &__profile {
+        &__wrapper {
+            
+            &__list {
                 display: none;
             }
-       }
-   
-       .fa {
-           color: $primary-color;
-           font-size: $awesome-size;
-       }
+        }
+    }
 
-       .fa-times {
-           color: #A40C0A;
-       }
-   }
+    &__icons {
+        display: flex;
+        order: 3;
+        width: 15%;
+
+        &__shopping-cart {
+            margin-left: auto;
+            margin-right: 1rem;
+            position: relative;
+            cursor: pointer;
+            
+            &__cart-quantity {
+                position: absolute;
+                display: flex;
+                justify-content: space-around;
+                width: 1.2rem;
+                height: 1.2rem;
+                color: white;
+                background: green;
+                top: -4px;
+                right: -7px;
+                border-radius: 50%;
+                font-size: 1rem;
+                font-family: $text-large;
+                // display: none;
+            }
+        }
+
+        &__profile {
+            display: none;
+        }
+    }
+
+    .fa {
+        color: $primary-color;
+        font-size: $awesome-size;
+    }
+}
+
+.fa-times {
+    color: #A40C0A;
+}
 
    .active {
        font-weight: bold;
@@ -79,7 +79,7 @@
        top: 3px;
        font-family: $text-small;
        font-size: 14px;
-   }
+    }
 
 @media only screen and (min-width: 641px) {
     .nav {

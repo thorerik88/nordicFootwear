@@ -5,9 +5,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 const container = document.querySelector(".details");
 
-createDetails();
-
-async function createDetails() {
+(async function createDetails() {
     const url = baseUrl + "/products/" + id;
     let html = "";
 
@@ -45,5 +43,5 @@ async function createDetails() {
         console.log(error);
     }
 
-}
+})();
 

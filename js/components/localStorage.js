@@ -1,8 +1,21 @@
-import updateCart from "./updateCart.js";
-
-const tokenKey = "token";
-const idKey = "id";
+export const tokenKey = "token";
+export const idKey = "products";
 export const userKey = "user";
+
+export function deleteProduct(id) {
+    let newList = [];
+
+    const existingCart = getFromStorage(idKey)
+    const filteredItems = existingCart.filter(function(item) {
+        if (id !== item.id) {
+            return true;
+        }
+    })
+    newList = filteredItems;
+    saveToStorage(idKey, newList)
+}
+
+
 
 export function saveProduct(id, title, price, url) {
     saveProductToStorage(idKey, id, title, price, url );

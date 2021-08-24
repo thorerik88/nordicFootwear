@@ -1,6 +1,6 @@
 import createNav from "./components/createNav.js";
 import createFooter from "./components/createFooter.js";
-import { clearStorage, getUsername, userKey } from "./components/localStorage.js";
+import { clearStorage, getUsername, userKey, tokenKey } from "./components/localStorage.js";
 import createFeatured from "./components/createFeatured.js";
 
 const username = getUsername();
@@ -21,6 +21,7 @@ if (loginText.innerHTML === "Logout") {
     loginButton.addEventListener("click", function() {
         loginText.innerHTML = "Login";
         clearStorage(userKey);
+        clearStorage(tokenKey)
         location.href = "/";
     })
 } else {
