@@ -7,7 +7,6 @@ export default function createHtml(json, container) {
         // check type of image url
         let imageUrl;
         const id = element.id;
-        console.log(id)
 
         if (element.image_url === null || element.image_url === "") {
             imageUrl = baseUrl + element.image.url;

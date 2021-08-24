@@ -1,7 +1,5 @@
 import { baseUrl } from "../settings/api.js";
 import { saveProduct } from "./localStorage.js";
-import updateCart from "./updateCart.js";
-import createNav from "./createNav.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
@@ -35,10 +33,10 @@ async function createDetails() {
         `;
         container.innerHTML = html;
 
-        // add to localStorage and change cart qty
+        // add to localStorage and change location
         const cartButton = document.querySelector(".shop-btn");
         cartButton.addEventListener("click", () => {
-            saveProduct(id);
+            saveProduct(id, title, price, imageUrl);
             location.href = "/shoes.html";
         })
 

@@ -33,6 +33,7 @@ const shoes = baseUrl + "/products";
             box.addEventListener('click', (e)=>{
                 let boxId = e.target.parentNode.id;
                 let url = "/details.html?id=" + boxId;
+                
                 location.href = url;
             })
         })

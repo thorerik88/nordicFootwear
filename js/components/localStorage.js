@@ -4,8 +4,8 @@ const tokenKey = "token";
 const idKey = "id";
 export const userKey = "user";
 
-export function saveProduct(id) {
-    saveProductToStorage(idKey, id);
+export function saveProduct(id, title, price, url) {
+    saveProductToStorage(idKey, id, title, price, url );
 }
 
 export function saveToken(token) {
@@ -48,24 +48,32 @@ export function getFromStorage(key) {
     return JSON.parse(value);
 }
 
-function saveProductToStorage(key, value) {
+// save product details to localStorage
+function saveProductToStorage(key, value, title, price, url) {
     let cartList = [];
+    const newItem = {
+        "id": value,
+        "title": title,
+        "price": price,
+        "url": url
+    };
 
     if (getFromStorage(key).length === 0) {
-        cartList.push(value)
+        cartList.push(newItem)
         saveToStorage(key, cartList);
+
     } else {
         const existingCart = getFromStorage(key);
-        
-        const filteredCart = existingCart.filter(function(id) {
-            if (id === value) {
+        const filteredCart = existingCart.filter(function(item) {
+            
+            if (item.id === value) {
                 return true;
             }
         })       
         
         if (filteredCart.length === 0) {
             cartList = existingCart;
-            cartList.push(value);    
+            cartList.push(newItem);    
             saveToStorage(key, cartList)
         }
     }
