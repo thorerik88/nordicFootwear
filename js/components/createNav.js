@@ -37,7 +37,7 @@ export default function createNav() {
 
     navContainer.innerHTML = `
     <span class="login-message">You are not logged in</span>
-    <div class="nav__logo"></div>
+    <a href="index.html" class="nav__logo"></a>
     <div class="nav__navmenu">
         <div class="nav__navmenu__wrapper">
             <ul class="nav__navmenu__wrapper__list">
